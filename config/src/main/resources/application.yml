@@ -2,6 +2,9 @@ server:
   port: 8888
 
 spring:
+  output:
+    ansi:
+      enabled: always
   profiles:
     active: native
   application:
@@ -10,5 +13,4 @@ spring:
     config:
       server:
         native:
-          search-locations: /configurations
-
+          search-locations: classpath:/configurations
