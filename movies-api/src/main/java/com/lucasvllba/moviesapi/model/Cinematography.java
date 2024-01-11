@@ -1,10 +1,11 @@
 package com.lucasvllba.moviesapi.model;
 
-import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Set;
 
 import com.lucasvllba.moviesapi.model.enums.CineGender;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
@@ -18,13 +19,14 @@ import lombok.Setter;
 
 @MappedSuperclass
 @Setter @Getter @NoArgsConstructor @AllArgsConstructor
-public class Cinematography implements Serializable {
+public class Cinematography{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Enumerated(EnumType.STRING)
-    private CineGender gender;
     private String title;
+    @ElementCollection(targetClass = CineGender.class)
+    @Enumerated(EnumType.STRING)
+    private Set<CineGender> gender;
     private LocalDate premiereDate; 
 }

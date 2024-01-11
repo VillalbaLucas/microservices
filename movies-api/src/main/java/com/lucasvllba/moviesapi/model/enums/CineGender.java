@@ -9,6 +9,7 @@ public enum CineGender {
     DOCUMENTARIES,
     FANCY,
     MUSICALS,
+    ROMANCE,
     SCIENCE_FICTION,
     SUSPENSE,
     TERROR
