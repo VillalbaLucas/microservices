@@ -10,4 +10,5 @@ import com.lucasvllba.moviesapi.model.enums.CineGender;
 @Repository
 public interface MovieRepository extends BaseRepository<Movie, Long> {
     public List<Movie> findByGender(CineGender gender);
+    public List<Movie> findByTitle(String title);
 }
