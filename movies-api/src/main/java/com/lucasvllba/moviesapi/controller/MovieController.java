@@ -49,4 +49,9 @@ public class MovieController {
    public ResponseEntity<?> getByTitle(@RequestParam String title){
       return ResponseEntity.ok().body(movieService.findByTitle(title));
    }
+   
+   @PutMapping("/{id}")
+   public ResponseEntity<?> modifyMovie(@PathVariable Long id, @RequestBody Movie movie){
+      return ResponseEntity.ok().body(movieService.modify(id, movie));
+   }
 }
