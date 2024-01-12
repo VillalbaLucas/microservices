@@ -3,6 +3,8 @@ package com.lucasvllba.moviesapi.service;
 import java.util.List;
 
 import com.lucasvllba.moviesapi.model.Cinematography;
+import com.lucasvllba.moviesapi.model.Series;
+import com.lucasvllba.moviesapi.model.enums.CineGender;
 import com.lucasvllba.moviesapi.repository.BaseRepository;
 
 public abstract class BaseServiceImpl<T extends Cinematography, ID>  {
@@ -32,4 +34,12 @@ public abstract class BaseServiceImpl<T extends Cinematography, ID>  {
     public T findById(ID id) {
         return baseRepo.findById(id).orElseThrow();
     }
+
+    public List<T> findByGender(CineGender gender){
+        return baseRepo.findByGender(gender);
+    }
+    public List<T> findByTitle(String title){
+        return baseRepo.findByTitle(title);
+    }
+
 }
