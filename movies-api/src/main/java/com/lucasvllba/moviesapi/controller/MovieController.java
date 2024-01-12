@@ -8,13 +8,13 @@ import com.lucasvllba.moviesapi.model.Movie;
 import com.lucasvllba.moviesapi.model.enums.CineGender;
 import com.lucasvllba.moviesapi.service.MovieService;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
@@ -25,22 +25,28 @@ public class MovieController {
    private MovieService movieService;
 
    @PostMapping("")
-   public void save(@RequestBody Movie movie) {
+   public ResponseEntity<?> save(@RequestBody Movie movie) {
       movieService.save(movie);
+      return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
    }
 
    @GetMapping("")
-   public List<Movie> getAll() {
-      return movieService.findAll();
+   public ResponseEntity<?> getAll() {
+      return ResponseEntity.ok().body(movieService.findAll());
+   }
+   //Get by
+   @GetMapping("/{id}")
+   public ResponseEntity<?> getById(@PathVariable Long id) {
+      return ResponseEntity.ok().body(movieService.findById(id));
    }
 
    @GetMapping("/gender")
-   public List<Movie> getByGender(@RequestParam CineGender gender){
-      return movieService.findByGender(gender);
+   public ResponseEntity<?> getByGender(@RequestParam CineGender gender){
+      return ResponseEntity.ok().body(movieService.findByGender(gender));
    }
 
-   @GetMapping("/{id}")
-   public ResponseEntity<?> getAll(@PathVariable Long id) {
-      return ResponseEntity.ok().body(movieService.findById(id));
+   @GetMapping("/title")
+   public ResponseEntity<?> getByTitle(@RequestParam String title){
+      return ResponseEntity.ok().body(movieService.findByTitle(title));
    }
 }
