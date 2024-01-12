@@ -30,6 +30,6 @@ public abstract class BaseServiceImpl<T extends Cinematography, ID>  {
 
     // @Override
     public T findById(ID id) {
-        return baseRepo.findById(id).get();
+        return baseRepo.findById(id).orElseThrow();
     }
 }
