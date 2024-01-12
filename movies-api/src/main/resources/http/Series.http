@@ -1,0 +1,25 @@
+GET http://localhost:8010/api/v1/series
+###
+GET http://localhost:8010/api/v1/series/3
+###
+GET http://localhost:8010/api/v1/series/title?title=swat
+###
+GET http://localhost:8010/api/v1/series/gender?gender=ACTION
+###
+POST http://localhost:8010/api/v1/series
+Content-Type: application/json
+
+{
+    "title": "Breaking Bad",
+    "gender": ["ACTION", "DRAMA", "SCIENCE_FICTION"],
+    "seasons": 5
+}
+###
+PUT http://localhost:8010/api/v1/series/2
+Content-Type: application/json
+
+{
+    "title": "SWAT",
+    "gender": ["DRAMA","SUSPENSE", "ACTION"],
+    "seasons": 3
+}
