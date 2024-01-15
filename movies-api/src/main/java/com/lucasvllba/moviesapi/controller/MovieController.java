@@ -54,4 +54,9 @@ public class MovieController {
    public ResponseEntity<?> modifyMovie(@PathVariable Long id, @RequestBody Movie movie){
       return ResponseEntity.ok().body(movieService.modify(id, movie));
    }
+
+   @GetMapping("/by-director/{directorId}")
+   public ResponseEntity<?> getAllByDirectorId(@PathVariable Long directorId){
+      return ResponseEntity.ok().body(movieService.getAllByDirectorId(directorId));
+   }
 }
