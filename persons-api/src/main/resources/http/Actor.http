@@ -1,0 +1,21 @@
+GET http://localhost:8020/api/v1/actors
+###
+GET http://localhost:8020/api/v1/actors/1
+###
+POST http://localhost:8020/api/v1/actors
+Content-Type: application/json
+
+{
+    "name": "Mickael",
+    "lastname": "Jordan",
+    "age": 60,
+    "gender":"MALE"
+}
+###
+PUT http://localhost:8020/api/v1/actors/1
+Content-Type: application/json
+
+{
+    "lastname": "Di Caprio",
+    "name": "Antonio"
+}

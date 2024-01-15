@@ -20,6 +20,7 @@
 		<module>eureka</module>
 		<module>config</module>
 		<module>movies-api</module>
+		<module>persons-api</module>
 	</modules>
 	<properties>
 		<java.version>17</java.version>
