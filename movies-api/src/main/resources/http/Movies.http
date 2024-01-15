@@ -4,7 +4,7 @@ GET http://localhost:8010/api/v1/movies/1
 ###
 GET http://localhost:8010/api/v1/movies/title?title=titanic
 ###
-GET http://localhost:8010/api/v1/movies/gender?gender=ACTION
+GET http://localhost:8010/api/v1/movies/gender?gender=TERROR
 ###
 POST http://localhost:8010/api/v1/movies
 Content-Type: application/json
