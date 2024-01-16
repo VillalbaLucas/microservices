@@ -5,6 +5,7 @@ import java.util.Set;
 
 import com.lucasvllba.moviesapi.model.enums.CineGender;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -29,4 +30,6 @@ public class Cinematography{
     @Enumerated(EnumType.STRING)
     private Set<CineGender> gender;
     private LocalDate premiereDate; 
+    @Column(name="director_id")
+    private Long directorId;
 }
