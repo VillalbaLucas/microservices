@@ -1,0 +1,23 @@
+GET http://localhost:8020/api/v1/directors
+###
+GET http://localhost:8020/api/v1/directors/1
+###
+GET http://localhost:8020/api/v1/directors/1/movies
+###
+POST http://localhost:8020/api/v1/directors
+Content-Type: application/json
+
+{
+    "name": "Lorena",
+    "lastname": "Muñoz",
+    "age": 45,
+    "gender":"FEMALE"
+}
+###
+PUT http://localhost:8020/api/v1/directors/1
+Content-Type: application/json
+
+{
+    "lastname": "Di Caprio",
+    "name": "Antonio"
+}
