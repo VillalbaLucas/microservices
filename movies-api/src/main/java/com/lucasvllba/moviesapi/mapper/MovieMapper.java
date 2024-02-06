@@ -15,5 +15,7 @@ public class MovieMapper {
             data.setTitle(modifiedMovie.getTitle());
         if(modifiedMovie.getDirectorId() != null)
             data.setDirectorId(modifiedMovie.getDirectorId());
+        if(!modifiedMovie.getActorsId().isEmpty())
+            data.setActorsId(modifiedMovie.getActorsId());
     }
 }
