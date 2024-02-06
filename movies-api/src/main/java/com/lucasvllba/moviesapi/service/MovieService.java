@@ -30,4 +30,8 @@ public class MovieService extends BaseServiceImpl<Movie, Long>{
     public List<Movie> getAllByDirectorId(Long directorId) {
         return movieRepo.findAllByDirectorId(directorId);
     }
+
+    public List<Movie> findAllByActorsId(Long actorId) {
+        return movieRepo.findAllByActorsId(actorId);
+    }
 }

@@ -2,6 +2,8 @@ GET http://localhost:8010/api/v1/movies
 ###
 GET http://localhost:8010/api/v1/movies/1
 ###
+GET http://localhost:8010/api/v1/movies/by-actor/4
+###
 GET http://localhost:8010/api/v1/movies/by-director/1
 ###
 GET http://localhost:8010/api/v1/movies/title?title=saw
@@ -18,9 +20,9 @@ Content-Type: application/json
     "directorId": 1
 }
 ###
-PUT http://localhost:8010/api/v1/movies/2
+PUT http://localhost:8010/api/v1/movies/4
 Content-Type: application/json
 
 {
-    "directorId": 1
+    "actorsId": [4]
 }

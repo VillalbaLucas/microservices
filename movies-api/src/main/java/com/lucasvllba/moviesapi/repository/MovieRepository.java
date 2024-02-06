@@ -9,4 +9,5 @@ import com.lucasvllba.moviesapi.model.Movie;
 @Repository
 public interface MovieRepository extends BaseRepository<Movie, Long> {
     public List<Movie> findAllByDirectorId(Long directorId);
+    public List<Movie> findAllByActorsId(Long actorId);
 }
