@@ -34,6 +34,12 @@ public class ActorController {
         return ResponseEntity.ok().body(service.findById(id));
     }
 
+    // get movies 
+    @GetMapping("/{id}/movies")
+    public ResponseEntity<?> getMoviesForActor(@PathVariable Long id){
+        return ResponseEntity.ok().body(service.findAllMovies(id));
+    }
+
     @PostMapping("")
     public ResponseEntity<?> save(@RequestBody Actor actor) {
         service.save(actor);
