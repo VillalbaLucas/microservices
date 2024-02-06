@@ -12,4 +12,6 @@ import com.lucasvllba.personsapi.dto.MovieDto;
 public interface MovieClient {
     @GetMapping("/by-director/{directorId}")
     public List<MovieDto> getAllByDirectorId(@PathVariable Long directorId);
+    @GetMapping("/by-actor/{actorId}")
+    public List<MovieDto> getAllByActorId(@PathVariable Long actorId);
 }
