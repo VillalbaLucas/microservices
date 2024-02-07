@@ -19,6 +19,7 @@
 	<modules>
 		<module>eureka</module>
 		<module>config</module>
+		<module>gateway</module>
 		<module>movies-api</module>
 		<module>persons-api</module>
 	</modules>
