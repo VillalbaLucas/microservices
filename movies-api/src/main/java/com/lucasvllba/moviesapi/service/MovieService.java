@@ -1,20 +1,13 @@
 package com.lucasvllba.moviesapi.service;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.lucasvllba.moviesapi.mapper.MovieMapper;
 import com.lucasvllba.moviesapi.model.Movie;
 import com.lucasvllba.moviesapi.repository.BaseRepository;
-import com.lucasvllba.moviesapi.repository.MovieRepository;
 
 @Service
 public class MovieService extends BaseServiceImpl<Movie, Long>{
-
-    @Autowired
-    private MovieRepository movieRepo;
 
     public MovieService(BaseRepository<Movie, Long> baseRepo) {
         super(baseRepo);
@@ -27,11 +20,4 @@ public class MovieService extends BaseServiceImpl<Movie, Long>{
         return data;
     }
 
-    public List<Movie> getAllByDirectorId(Long directorId) {
-        return movieRepo.findAllByDirectorId(directorId);
-    }
-
-    public List<Movie> findAllByActorsId(Long actorId) {
-        return movieRepo.findAllByActorsId(actorId);
-    }
 }
