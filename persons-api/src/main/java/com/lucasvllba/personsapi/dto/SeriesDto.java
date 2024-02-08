@@ -6,8 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter @Getter @NoArgsConstructor @AllArgsConstructor
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 @Builder
-public class MovieDto extends BaseMovieAndSeries { 
-    private int duration;
+public class SeriesDto extends BaseMovieAndSeries{
+    private int seasons;
 }
