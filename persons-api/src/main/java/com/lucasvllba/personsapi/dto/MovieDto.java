@@ -1,13 +1,10 @@
 package com.lucasvllba.personsapi.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import java.time.LocalDate;
+import java.util.Set;
 
-@Setter @Getter @NoArgsConstructor @AllArgsConstructor
-@Builder
-public class MovieDto extends BaseMovieAndSeries { 
-    private int duration;
+import com.lucasvllba.personsapi.dto.enums.CineGender;
+
+public record MovieDto (String title, Set<CineGender> gender, LocalDate premiereDate, int duration) { 
+
 }
