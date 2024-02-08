@@ -11,4 +11,6 @@ import com.lucasvllba.moviesapi.model.enums.CineGender;
 public interface BaseRepository<E, ID> extends JpaRepository<E , ID>{
     public List<E> findByGender(CineGender gender);
     public List<E> findByTitle(String title);
+    public List<E> findAllByDirectorId(Long directorId);
+    public List<E> findAllByActorsId(Long actorId);
 }
