@@ -20,9 +20,10 @@ Content-Type: application/json
     "directorId": 1
 }
 ###
-PUT http://localhost:8010/api/v1/movies/4
+PUT http://localhost:8010/api/v1/movies/1
 Content-Type: application/json
 
 {
+    "gender": ["TERROR", "SUSPENSE"],
     "actorsId": [4]
 }

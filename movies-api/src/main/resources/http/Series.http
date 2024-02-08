@@ -10,16 +10,18 @@ POST http://localhost:8010/api/v1/series
 Content-Type: application/json
 
 {
-    "title": "Breaking Bad",
-    "gender": ["ACTION", "DRAMA", "SCIENCE_FICTION"],
-    "seasons": 5
+    "title": "Swat",
+    "gender": ["ACTION", "DRAMA", "SUSPENSE"],
+    "seasons": 10,
+    "premiereDate": "2012-01-12",
+    "actorsId": [1,2]
 }
 ###
-PUT http://localhost:8010/api/v1/series/2
+PUT http://localhost:8010/api/v1/series/1
 Content-Type: application/json
 
 {
-    "title": "SWAT",
-    "gender": ["DRAMA","SUSPENSE", "ACTION"],
-    "seasons": 3
+    "title": "Braking Bad",
+    "gender": ["ACTION", "SCIENCE_FICTION"],
+    "acotrsId": [4, 7]
 }

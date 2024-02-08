@@ -2,6 +2,8 @@ GET http://localhost:8020/api/v1/actors
 ###
 GET http://localhost:8020/api/v1/actors/4/movies
 ###
+GET http://localhost:8020/api/v1/actors/1/series
+###
 GET http://localhost:8020/api/v1/actors/1
 ###
 POST http://localhost:8020/api/v1/actors
