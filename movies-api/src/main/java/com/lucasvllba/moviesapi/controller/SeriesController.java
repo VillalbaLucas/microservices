@@ -54,4 +54,15 @@ public class SeriesController {
     public ResponseEntity<?> modifyMovie(@PathVariable Long id, @RequestBody Series series) {
         return ResponseEntity.ok().body(seriesService.modify(id, series));
     }
+
+    @GetMapping("/by-director/{directorId}")
+    public ResponseEntity<?> getAllByDirectorId(@PathVariable Long directorId) {
+        return ResponseEntity.ok().body(seriesService.getAllByDirectorId(directorId));
+    }
+
+    // proporciona los actores de la pelicula
+    @GetMapping("/by-actor/{actorId}")
+    public ResponseEntity<?> getAllByActorId(@PathVariable Long actorId) {
+        return ResponseEntity.ok().body(seriesService.findAllByActorsId(actorId));
+    }
 }
